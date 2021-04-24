@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{311B9E43-120C-46A5-A258-50FC64FA6E42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DatabaseApp</RootNamespace>
+    <AssemblyName>DatabaseApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckKoneksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckKoneksi.Designer.cs">
+      <DependentUpon>CheckKoneksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conn.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateData.Designer.cs">
+      <DependentUpon>UpdateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahData.Designer.cs">
+      <DependentUpon>TambahData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CheckKoneksi.resx">
+      <DependentUpon>CheckKoneksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UpdateData.resx">
+      <DependentUpon>UpdateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahData.resx">
+      <DependentUpon>TambahData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mahasiswa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mahasiswa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mhs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mhs1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mhs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_36851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessregistration_signpen_negocio_inscripcio_2358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycling_recyclebin_empty_delete_trash_1771.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_closethesession_close_6317.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_closethesession_close_6317 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
